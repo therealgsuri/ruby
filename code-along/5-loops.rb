@@ -6,6 +6,30 @@
 # loop do
 #   puts "tacos!"
 # end
+index=0
+loop do
+    if index == 5
+        break
+    end
+    puts "TACOS"
+    index=index+1
+end
 
+index = 0
 # Loop through tacos
-# tacos = ["carnitas", "carne asada", "pollo", "pescado"]
+tacos = ["carnitas", "carne asada", "pollo", "pescado"]
+loop doc
+if index == tacos.size
+    break
+end
+
+taco= tacos[index]
+
+puts "#{taco} tacos!"
+
+index=index + 1
+
+
+for favtaco in tacos
+    puts "#{favtaco} tacos!"
+end

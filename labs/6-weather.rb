@@ -30,3 +30,31 @@ weather_data = {
     { temperature: 60, conditions: "Rainy", precipitation: 0.9 }
   ]
 }
+
+currtemp = weather_data[:current][:temperature]
+currcondition = weather_data[:current][:conditions]
+
+
+
+puts "Currently the weather is #{currtemp} and #{currcondition}"
+puts "Forecast for the next 7 days:"
+
+for day in weather_data[:forecast]
+  temp = day[:temperature]
+  cond = day[:conditions]
+  precip = (day[:precipitation] * 100).round
+
+  if cond != "Rainy" && precip > 50
+    puts "- #{temp} degrees and #{cond} with a #{precip}% chance of rain"
+  else 
+    puts "- #{temp} degrees and #{cond}"
+  end
+end
+
+
+  
+
+# rate = bitcoin_data["bpi"]["USD"]["rate_float"] 
+# value = bitcoin * rate
+# puts "1 Bitcoin is valued at $#{rate} USD."
+# puts "Your Bitcoin is worth $#{value}."

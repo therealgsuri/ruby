@@ -12,6 +12,25 @@
 # If the two lists contain the same item, only show it once!
 # Lastly, display each item in the list prepended with "buy ".
 
+mylist = ["milk", "eggs", "bacon"]
+friendslist = ["beer", "cookies", "apples"]
+completelist = (mylist + friendslist).sort
+noduplist = completelist.uniq
+puts noduplist
+
+index=0
+finalbuylist = noduplist
+
+loop do
+  if index == finalbuylist.size
+    break
+  end
+
+  item = finalbuylist[index]
+  puts "buy #{item}"
+  index = index + 1
+end
+
 # HINTS
 # Learn to read the documentation!
 # https://ruby-doc.org/core-2.7.0/Array.html
